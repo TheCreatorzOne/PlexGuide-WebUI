@@ -26,5 +26,6 @@ Created & currently developed by The Creator & Flicker-rate
             echo "<pre>$cmd</pre>";
         }
         ?>
+
     </body>
 </html>
