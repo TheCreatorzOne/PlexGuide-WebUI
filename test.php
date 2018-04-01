@@ -23,7 +23,7 @@ Created & currently developed by The Creator & Flicker-rate
         if(isset($_POST['command']))
         {
             $cmd= shell_exec('ifconfig -a');
-            echo "<pre>$cmd</pre>";
+            echo '<pre>$cmd</pre>';
         }
         echo
         "<form action='' method='post'>
@@ -33,8 +33,9 @@ Created & currently developed by The Creator & Flicker-rate
         if(isset($_POST['update']))
         {
             $cmd1= 'sudo apt-get update';
-            $update=exec($cmd1);
-            echo "<pre>$update</pre>";
+            echo '<pre>';
+            passthru ($cmd1);
+            echo '</pre>';
         }
         ?>
 
