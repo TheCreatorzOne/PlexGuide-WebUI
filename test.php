@@ -33,8 +33,10 @@ Created & currently developed by The Creator & Flicker-rate
 
         if(isset($_POST['ping']))
         {
-            passthru ('ping google.com');
-
+          $cmd1='sudo apt-get update';
+          echo '<pre>';
+          passthru ('$cmd1');
+          echo '</pre>';
         }
         ?>
 
