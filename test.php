@@ -33,9 +33,9 @@ Created & currently developed by The Creator & Flicker-rate
 
         if(isset($_POST['ping']))
         {
-          $cmd1='sudo apt-get update';
+#          $cmd1='sudo apt-get update -y';
           echo '<pre>';
-          passthru ('$cmd1');
+          passthru ('sudo apt-get update -y');
           echo '</pre>';
         }
         ?>
