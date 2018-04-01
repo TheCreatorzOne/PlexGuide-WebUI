@@ -35,9 +35,10 @@ Created & currently developed by The Creator & Flicker-rate
         {
 //          ob_flush();
 //	           flush();
-            while (@ob_end_flush());
+//            while (@ob_end_flush());
               echo '<pre>';
-              $output = system('ping -c 4 google.com');
+              flush();
+                $output = system('ping -c 4 google.com');
               echo '</pre>';
         }
         ?>
