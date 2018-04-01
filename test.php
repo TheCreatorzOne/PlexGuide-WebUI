@@ -36,10 +36,10 @@ Created & currently developed by The Creator & Flicker-rate
 //          ob_flush();
 //	           flush();
 //            while (@ob_end_flush());
-              echo '<pre>';
-              flush();
-                $output = system('ping -c 4 google.com');
-              echo '</pre>';
+            echo '<pre>';
+            flush();
+            $output = system('sudo apt-get update');
+            echo '</pre>';
         }
         ?>
 
