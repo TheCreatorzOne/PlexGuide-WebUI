@@ -32,7 +32,7 @@ Created & currently developed by The Creator & Flicker-rate
 
         if(isset($_POST['update']))
         {
-            $cmd1= shell_exec('sudo apt-get update');
+            $cmd1= `sudo apt-get update`;
             echo "<pre>$cmd1</pre>";
         }
         ?>
