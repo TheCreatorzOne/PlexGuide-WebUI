@@ -32,9 +32,20 @@ Created & currently developed by The Creator & Flicker-rate
 
         if(isset($_POST['update']))
         {
-            $cmd1= 'sudo apt-get update';
+            $cmd1= shell_exec('sudo apt-get update');
+
+#            echo '<pre>';
+#            passthru ($cmd1);
+#            echo '</pre>';
+            while (@ ob_end_flush()); // end all output buffers if any
+
+            $proc = popen($cmd1, 'r');
             echo '<pre>';
-            passthru ($cmd1);
+            while (!feof($proc))
+            {
+              echo fread($proc, 1);
+              @ flush();
+            }
             echo '</pre>';
         }
         ?>
