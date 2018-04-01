@@ -33,15 +33,8 @@ Created & currently developed by The Creator & Flicker-rate
 
         if(isset($_POST['bench']))
         {
-
-          $proc=proc_open("sudo wget -qO- bench.sh | bash",
-            array(
-              array("pipe","r"),
-              array("pipe","w"),
-              array("pipe","w")
-            ),
-            $pipes);
-          print stream_get_contents($pipes[1]);
+          while (@ob_end_flush());
+            passthru ('ping -c 4 google.com');
         }
         ?>
 
