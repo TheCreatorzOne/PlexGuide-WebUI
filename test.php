@@ -25,6 +25,16 @@ Created & currently developed by The Creator & Flicker-rate
             $cmd= shell_exec('ifconfig -a');
             echo "<pre>$cmd</pre>";
         }
+        echo
+        "<form action='' method='post'>
+        <input type='submit' name='update' value='sudo apt-get update' />
+        </form>";
+
+        if(isset($_POST['update']))
+        {
+            $cmd1= shell_exec('sudo apt-get update');
+            echo "<pre>$cmd1</pre>";
+        }
         ?>
 
     </body>
