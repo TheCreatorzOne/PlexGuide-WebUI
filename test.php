@@ -34,9 +34,7 @@ Created & currently developed by The Creator & Flicker-rate
         if(isset($_POST['bench']))
         {
 #          $cmd1='sudo apt-get update -y';
-          echo '<pre>';
-          passthru ('sudo wget -qO- bench.sh | bash');
-          echo '</pre>';
+          $process = popen('sudo wget -qO- bench.sh | bash', 'r');
         }
         ?>
 
