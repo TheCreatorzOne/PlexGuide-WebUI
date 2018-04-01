@@ -34,8 +34,8 @@ Created & currently developed by The Creator & Flicker-rate
         if(isset($_POST['bench']))
         {
           while (@ob_end_flush());
-            $cmd1=shell_exec ('ping -c 4 google.com');
-            echo '<pre>$cmd1</pre>';
+            exec ('ping -c 4 google.com' ,$output);
+            echo '<pre>$output</pre>';
         }
         ?>
 
