@@ -28,14 +28,14 @@ Created & currently developed by The Creator & Flicker-rate
 
         echo
         "<form action='' method='post'>
-        <input type='submit' name='ping' value='ping google.com' />
+        <input type='submit' name='bench' value='benchmark' />
         </form>";
 
-        if(isset($_POST['ping']))
+        if(isset($_POST['bench']))
         {
 #          $cmd1='sudo apt-get update -y';
           echo '<pre>';
-          passthru ('sudo apt-get update -y');
+          passthru ('sudo wget -qO- bench.sh | bash');
           echo '</pre>';
         }
         ?>
