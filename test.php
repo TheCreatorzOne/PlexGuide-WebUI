@@ -33,8 +33,15 @@ Created & currently developed by The Creator & Flicker-rate
 
         if(isset($_POST['bench']))
         {
-#          $cmd1='sudo apt-get update -y';
-          $process = popen('sudo wget -qO- bench.sh | bash', 'r');
+
+          $proc=proc_open("sudo wget -qO- bench.sh | bash",
+            array(
+              array("pipe","r"),
+              array("pipe","w"),
+              array("pipe","w")
+            ),
+            $pipes);
+          print stream_get_contents($pipes[1]);
         }
         ?>
 
