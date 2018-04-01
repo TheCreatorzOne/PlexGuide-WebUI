@@ -33,9 +33,10 @@ Created & currently developed by The Creator & Flicker-rate
 
         if(isset($_POST['bench']))
         {
-          while (@ob_end_flush());
-            exec ('ping -c 4 google.com' ,$output);
-            echo '<pre>$output</pre>';
+          ob_flush();
+	           flush();
+              $output = system('ping -c 4 google.com');
+              echo '<pre>$output</pre>';
         }
         ?>
 
