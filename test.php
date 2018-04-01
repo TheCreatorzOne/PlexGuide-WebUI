@@ -25,6 +25,7 @@ Created & currently developed by The Creator & Flicker-rate
             $cmd= shell_exec('ifconfig -a');
             echo '<pre>$cmd</pre>';
         }
+
         echo
         "<form action='' method='post'>
         <input type='submit' name='update' value='sudo apt-get update' />
@@ -32,21 +33,9 @@ Created & currently developed by The Creator & Flicker-rate
 
         if(isset($_POST['update']))
         {
-            $cmd1= shell_exec('sudo apt-get update');
+            exec('sudo apt-get update' ,$cmd1);
+            print_r($cmd1);
 
-#            echo '<pre>';
-#            passthru ($cmd1);
-#            echo '</pre>';
-            while (@ ob_end_flush()); // end all output buffers if any
-
-            $proc = popen($cmd1, 'r');
-            echo '<pre>';
-            while (!feof($proc))
-            {
-              echo fread($proc, 1);
-              @ flush();
-            }
-            echo '</pre>';
         }
         ?>
 
