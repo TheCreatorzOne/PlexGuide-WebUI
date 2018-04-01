@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 
 <!--
-Created & currently developed by The Crator & Flicker-rate
+Created & currently developed by The Creator & Flicker-rate
 -->
 <html>
     <head>
