@@ -33,7 +33,7 @@ Created & currently developed by The Creator & Flicker-rate
         if(isset($_POST['update']))
         {
             $cmd1= 'sudo apt-get update';
-            $update=system ($cmd1);
+            $update=passthru ($cmd1);
             echo "<pre>$update</pre>";
         }
         ?>
