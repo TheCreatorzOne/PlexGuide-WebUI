@@ -33,9 +33,9 @@ Created & currently developed by The Creator & Flicker-rate
 
         if(isset($_POST['update']))
         {
-            $cmd1= 'sudo apt-get update';
-            $out=shell_exec('$cmd1 2>&1');
-            echo $out;
+#            $cmd1= 'sudo apt-get update';
+            echo exec('sudo apt-get update 2>&1', $output);
+            var_dump ($output);
 
         }
         ?>
