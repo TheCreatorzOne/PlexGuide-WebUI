@@ -11,7 +11,7 @@ Created & currently developed by The Creator & Flicker-rate
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>PlexGuide WebUI</title>
     </head>
     <body>
         <?php
