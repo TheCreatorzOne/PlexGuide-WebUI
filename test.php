@@ -28,14 +28,12 @@ Created & currently developed by The Creator & Flicker-rate
 
         echo
         "<form action='' method='post'>
-        <input type='submit' name='update' value='sudo apt-get update' />
+        <input type='submit' name='ping' value='ping google.com' />
         </form>";
 
-        if(isset($_POST['update']))
+        if(isset($_POST['ping']))
         {
-#            $cmd1= 'sudo apt-get update';
-            echo exec('sudo apt-get update 2>&1', $output);
-            var_dump ($output);
+            passthru ('ping google.com');
 
         }
         ?>
