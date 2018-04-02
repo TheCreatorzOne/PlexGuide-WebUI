@@ -23,7 +23,7 @@ Created & currently developed by The Creator & Flicker-rate
         if(isset($_POST['command']))
         {
             echo '<pre>';
-            $cmd=shell_exec('ifconfig -a');
+              shell_exec('ifconfig -a');
             echo '</pre>';
         }
 
