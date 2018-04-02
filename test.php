@@ -26,7 +26,6 @@ Created & currently developed by The Creator & Flicker-rate
             echo '<pre>$cmd</pre>';
         }
 
-#        ob_end_flush();
         echo
         "<form action='' method='post'>
         <input type='submit' name='bench' value='benchmark' />
