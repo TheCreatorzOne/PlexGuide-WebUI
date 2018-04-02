@@ -22,9 +22,8 @@ Created & currently developed by The Creator & Flicker-rate
 
         if(isset($_POST['command']))
         {
-            echo '<pre>';
-              shell_exec('ifconfig -a');
-            echo '</pre>';
+            $cmd=shell_exec('ifconfig -a');
+            echo '<pre>$cmd</pre>';
         }
 
 #        ob_end_flush();
