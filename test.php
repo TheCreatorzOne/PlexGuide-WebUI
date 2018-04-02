@@ -22,7 +22,7 @@ Created & currently developed by The Creator & Flicker-rate
 
         if(isset($_POST['command']))
         {
-            $cmd = shell_exec('ifconfig -a');
+            $cmd= shell_exec('ifconfig -a');
             echo '<pre>$cmd</pre>';
         }
 
@@ -35,7 +35,7 @@ Created & currently developed by The Creator & Flicker-rate
         if(isset($_POST['bench']))
         {
             echo '<pre>';
-            $output = system('sudo apt-get update 1>&2');
+            $output= system('sudo apt-get update 1>&2');
             echo '</pre>';
         }
         ?>
