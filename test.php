@@ -15,7 +15,6 @@ Created & currently developed by The Creator & Flicker-rate
     </head>
     <body>
         <?php
-        ob_end_flush();
         echo
         "<form action='' method='post'>
         <input type='submit' name='command' value='Network Properties' />
@@ -24,10 +23,11 @@ Created & currently developed by The Creator & Flicker-rate
         if(isset($_POST['command']))
         {
             echo '<pre>';
-            $cmd=system('ifconfig -a');
+            $cmd=shell_exec('ifconfig -a');
             echo '</pre>';
         }
 
+        ob_end_flush();
         echo
         "<form action='' method='post'>
         <input type='submit' name='bench' value='benchmark' />
