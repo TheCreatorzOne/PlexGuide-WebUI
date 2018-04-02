@@ -15,6 +15,7 @@ Created & currently developed by The Creator & Flicker-rate
     </head>
     <body>
         <?php
+        ob_end_flush();
         echo
         "<form action='' method='post'>
         <input type='submit' name='command' value='Network Properties' />
@@ -22,8 +23,8 @@ Created & currently developed by The Creator & Flicker-rate
 
         if(isset($_POST['command']))
         {
-            $cmd= shell_exec('ifconfig -a');
-            echo '<pre>$cmd</pre>';
+            flush(); $cmd= shell_exec('ifconfig -a');
+            flush(); echo '<pre>$cmd</pre>';
         }
 
         echo
@@ -33,13 +34,9 @@ Created & currently developed by The Creator & Flicker-rate
 
         if(isset($_POST['bench']))
         {
-//          ob_flush();
-//	           flush();
-//            while (@ob_end_flush());
-            echo '<pre>';
-            flush();
-            $output = system('sudo apt-get update');
-            echo '</pre>';
+            flush(); echo '<pre>';
+            flush(); $output = system ('sudo apt-get update 1>&2');
+            flush(); echo '</pre>';
         }
         ?>
 
